@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="120" height="100" fill="none">
+  <defs>
+    <!-- Filter for soft modern 3D drop shadow -->
+    <filter id="envelopeShadow" x="-20%" y="-20%" width="140%" height="150%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0284c7" flood-opacity="0.22" />
+    </filter>
+
+    <filter id="eggGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#ea580c" flood-opacity="0.35" />
+    </filter>
+
+    <!-- Gradients for 3D isometric envelope faces -->
+    <linearGradient id="backFlapGrad" x1="60" y1="12" x2="60" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#bae6fd" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+
+    <linearGradient id="leftSideGrad" x1="16" y1="36" x2="60" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7dd3fc" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="rightSideGrad" x1="104" y1="36" x2="60" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <linearGradient id="frontPocketGrad" x1="60" y1="42" x2="60" y2="82" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#bae6fd" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Orange Embryo / Egg 3D Gradient -->
+    <radialGradient id="orangeEggGrad" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="25%" stop-color="#fb923c" />
+      <stop offset="70%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </radialGradient>
+
+    <linearGradient id="envelopeStrokeGrad" x1="16" y1="12" x2="104" y2="82" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#envelopeShadow)">
+    <!-- Back Interior / Open Flap -->
+    <path d="M60 14 L104 36 L60 58 L16 36 Z" fill="url(#backFlapGrad)" stroke="url(#envelopeStrokeGrad)" stroke-width="2.5" stroke-linejoin="round" />
+
+    <!-- Left Box Body Face -->
+    <path d="M16 36 L60 58 L60 82 L16 60 Z" fill="url(#leftSideGrad)" stroke="url(#envelopeStrokeGrad)" stroke-width="2.5" stroke-linejoin="round" />
+
+    <!-- Right Box Body Face -->
+    <path d="M60 58 L104 36 L104 60 L60 82 Z" fill="url(#rightSideGrad)" stroke="url(#envelopeStrokeGrad)" stroke-width="2.5" stroke-linejoin="round" />
+
+    <!-- Front Left Folding Flap -->
+    <path d="M16 60 L60 82 L60 54 Z" fill="#93c5fd" opacity="0.4" />
+
+    <!-- Front V-Pocket Face (Isometric Translucent Envelope Front) -->
+    <path d="M16 36 L60 58 L104 36 L60 82 Z" fill="url(#frontPocketGrad)" stroke="url(#envelopeStrokeGrad)" stroke-width="2" stroke-linejoin="round" />
+    
+    <!-- Inner Fold Accent Line -->
+    <path d="M16 36 L60 58 L104 36" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" />
+  </g>
+
+  <!-- Glowing Orange Embryo / Wax Seal in the Center -->
+  <g filter="url(#eggGlow)">
+    <!-- Orange Egg Oval Body -->
+    <ellipse cx="60" cy="56" rx="14" ry="18" fill="url(#orangeEggGrad)" stroke="#c2410c" stroke-width="1.2" />
+
+    <!-- Inner 3D Highlight Glow -->
+    <ellipse cx="56" cy="49" rx="5" ry="6.5" fill="#ffffff" opacity="0.85" />
+    <circle cx="54.5" cy="47" r="2.2" fill="#ffffff" opacity="0.95" />
+  </g>
+</svg>
